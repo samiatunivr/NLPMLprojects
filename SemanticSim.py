@@ -55,16 +55,12 @@ for c in range(0, len(words)):
                 d = enchant.Dict("en_US")
                 chk = d.check(tg)
                 if chk is True:
-                    if not tg.isdigit():
+                    if not tg.isdigit() and tg is not cls and tg not in tagC and tg not in flgTerms:
                         try:
-
-                            if tg is not cls:
-                                if tg not in tagC:
-                                    if tg not in flgTerms:
-                                        tgSim = wn.synset(tg + '.n.01')
-                                        out = cls1.wup_similarity(tgSim)
-                                        dist.append(out)
-                                        tagC.append(tg)
+                            tgSim = wn.synset(tg + '.n.01')
+                            out = cls1.wup_similarity(tgSim)
+                            dist.append(out)
+                            tagC.append(tg)
                         except:
                             pass
 
@@ -72,7 +68,7 @@ for c in range(0, len(words)):
             del spamreader
             del row
 
-            scores2.append(dist)
+            scores2.append(dist)      
         if not os.path.exists(str(dest_path + '/'+ selectedMeasure + '/')):
             os.makedirs(dest_path + '/' + selectedMeasure + '/')
 
@@ -82,4 +78,3 @@ for c in range(0, len(words)):
         wr.writerow(scores2)
         print(scores2)
         del scores2
-
