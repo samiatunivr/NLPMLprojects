@@ -17,7 +17,7 @@ def linearRegression(x_samples, y_labels):
     b = (sum_y - a * sum_x) / length
     return a, b
 
-# lets work on some one typical example example used of linear regression(our data file has two columns: column 1 represent the
+# lets work on  one typical example example used of linear regression(our data file has two columns: column 1 represent the
 # population of a city and column two represents a profit of a shop in the city) so we our goal is to find the relationship between these
 # vairabiles in order to find out which city we will be sitting our business. So our objective function is is given as h(x) = lamda_t*x;
 # the lamada is the parameter of our model, and we seek to minimize the cost fuction which
