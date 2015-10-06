@@ -77,8 +77,8 @@ for c in range(0, len(words)):
                     if tg.isalnum() is True:  # avoid words with a combination of numerica and strings
                         if sorted(tg) != sorted(cls):  # skip word that is similiar to the class name.
                             if tg not in tagC:  # check for non existed words
-                                if len(tg) > 2:  # check for  word length greater than 2 char
-                                    if tg in flgTerms:  # check if the given word is a list or not
+                                if len(tg) > 2:  # check for  word length greater than 2 chars
+                                    if tg in flgTerms:  # check if the given word is in a list 
                                         try:
                                             tgSim = wn.synset(tg + '.n.01')  # get the first synset in WOrdNet
                                             out = cls1.lch_similarity(tgSim)  # compute the distance
