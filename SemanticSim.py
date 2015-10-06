@@ -99,7 +99,4 @@ for c in range(0, len(words)):
         wr = csv.writer(my_file, quoting=csv.QUOTE_ALL)
         wr.writerow(dist)
         wr.writerow(tagC)
-        print(tagC)
-        print(dist)
-        del dist
-        del tagC
+      
