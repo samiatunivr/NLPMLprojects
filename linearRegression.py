@@ -37,4 +37,4 @@ x = toy_data_business[:, 0]
 y = toy_data_business[:, 1]
 print linearRegression(x, y)  # https://en.wikipedia.org/wiki/Linear_regression
 
-output = (1.1930336441895988, -3.8957808783119017)
+output = (1.1930336441895988, -3.8957808783119017) # W are loosing (our profite is decreasing if open a shop in this region)
